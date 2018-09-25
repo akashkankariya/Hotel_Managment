@@ -23,8 +23,9 @@
 			</div>
 		</div>
 		<div id="banner"></div>
+		<center>
 		<div id="f1">
-			<center><table>
+			<table>
 				<tr>
 					<th width="20%" height="50px">Destination</th>
 					<th width="20%" height="50px">Check in date</th>
@@ -46,8 +47,9 @@
 						</select></center>
 					</td>
 				</tr>
-			</table></center>
+			</table>
 		</div>
+		</center>
 		<div id="welcome">
 			<h1 align="center">Welcome to Marina Mirage</h1>
 			<center><font size="4">Isme sab karchra dal na hai.</center>

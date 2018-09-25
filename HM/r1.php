@@ -1,3 +1,6 @@
+<?php 
+include("connect.php");
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,6 +27,7 @@
 		</div>
 		<div id="banner">
 			<div id="form">
+			<form action="r1.php" method="post">
 			<table>
 				<tr>
 					<td>Status</td>
@@ -43,7 +47,7 @@
 				<tr>
 					<td>City</td>
 					<td>
-						<select>
+						<select name="city">
 							<option>--Select--</option>
 							<option>Mumbai</option>
 							<option>Dheli</option>
@@ -51,9 +55,13 @@
 					</td>
 				</tr>
 				<tr>
+					<td>District</td>
+					<td><input type="text" name="dis" placeholder="Enter dis" title="E-mail"></td>
+				</tr>
+				<tr>
 					<td>State</td>
 					<td>
-						<select>
+						<select name="state">
 							<option>--Select--</option>
 							<option>Maharashtra</option>
 							<option>Gujrat</option>
@@ -62,13 +70,13 @@
 				</tr>
 				<tr>
 					<td>Enter Email</td>
-					<td><input type="Email" name="Email" placeholder="Enter Email" title="E-mail"></td>
+					<td><input type="Email" name="email" placeholder="Enter Email" title="E-mail"></td>
 				</tr>
 				<tr>
 					<td>Check-In</td>
-					<td><input type="date" name="seein" placeholder="Check-In" title="Check in"></td>
+					<td><input type="date" name="cidate" placeholder="Check-In" title="Check in"></td>
 					<td>Check Out</td>
-					<td><input type="date" name="seeout" placeholder="Check out" title="Check out"></td>
+					<td><input type="date" name="codate" placeholder="Check out" title="Check out"></td>
 				</tr>
 				<tr>
 					<td>Enter number of Members</td>
@@ -78,6 +86,29 @@
 					<td><input style="width: 120px;height: 30px;border-radius: 20px;opacity: 0.9;" type="submit" name="submit" value="submit"></td>
 				</tr>
 			</table>
+			</form>
+			<?php 
+			if(isset($_POST['submit']))
+			{
+				$name=$_POST['name'];
+				$idno=$_POST['idno'];
+				$add=$_POST['address'];
+				$city=$_POST['city'];
+				$dis=$_POST['dis'];
+				$state=$_POST['state'];
+				$email=$_POST['email'];
+				$coout=$_POST['codate'];
+				$coin=$_POST['cidate'];
+				$m=$_POST['members'];
+				if(mysqli_query($a,"insert into f1(name,city,dis,email,state,cidate,codate,member,id,address) value('$name','$city','$dis','$email','$state','$coin','$coout','$m','$idno','$add')"))
+				{
+					echo "data done";
+				}
+				else{
+					echo "string";
+				}
+			}
+			 ?>
 		</div>
 		</div>
 		</div>
