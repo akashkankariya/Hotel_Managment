@@ -1,5 +1,8 @@
 <?php 
 include("connect.php");
+$r=$_GET['room'];
+$ci=$_GET['ci'];
+$co=$_GET['co'];
  ?>
 <!DOCTYPE html>
 <html>
@@ -17,11 +20,11 @@ include("connect.php");
 			</div>
 			<div id="nav">
 				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Login</a></li>
-					<li><a href="#">Booking</a></li>
+					<li><a href="start.php">Home</a></li>
+					<li><a href="r1.php">Registration</a></li>
+					<li><a href="booking.php">Booking</a></li>
 					<li><a href="#">Info</a></li>
-					<li><a href="#">Help</a></li>
+					<li><a href="contact.php">Help</a></li>
 				</ul>
 			</div>
 		</div>
@@ -29,9 +32,14 @@ include("connect.php");
 			<div id="form">
 			<form action="r1.php" method="post">
 			<table>
-				<tr>
+				<?php 
+					$q="select * from room where status='unbook'";
+					$run=mysqli_query($a,$q);
+					$num=mysqli_num_rows($run);
+					if($r<=$num){
+						?><tr>
 					<td>Status</td>
-					<td><output>Available</output></td>
+					<td><input type="text" name="satus" disabled="disabled" value="Available"></td>
 				</tr>
 
 				<tr>
@@ -74,9 +82,9 @@ include("connect.php");
 				</tr>
 				<tr>
 					<td>Check-In</td>
-					<td><input type="date" name="cidate" placeholder="Check-In" title="Check in"></td>
+					<td><input type="date" name="cidate" value="<?php echo $ci ?>" title="Check in"></td>
 					<td>Check Out</td>
-					<td><input type="date" name="codate" placeholder="Check out" title="Check out"></td>
+					<td><input type="date" name="codate" value="<?php echo $co ?>" title="Check out"></td>
 				</tr>
 				<tr>
 					<td>Enter number of Members</td>
@@ -85,6 +93,18 @@ include("connect.php");
 				<tr>
 					<td><input style="width: 120px;height: 30px;border-radius: 20px;opacity: 0.9;" type="submit" name="submit" value="submit"></td>
 				</tr>
+			<?php  					}
+			else{
+				?><table>
+					<tr><input type="text" name="satus" disabled="disabled" value="Unavailable"></tr>
+				</table>
+				<?php 
+
+			}
+			?>
+
+				
+				
 			</table>
 			</form>
 			<?php 

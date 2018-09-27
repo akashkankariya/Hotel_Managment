@@ -14,42 +14,15 @@
 			</div>
 			<div id="nav">
 				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Login</a></li>
-					<li><a href="#">Booking</a></li>
+					<li><a href="start.php">Home</a></li>
+					<li><a href="r1.php">Registration</a></li>
+					<li><a href="booking.php">Booking</a></li>
 					<li><a href="#">Info</a></li>
-					<li><a href="#">Help</a></li>
+					<li><a href="contact.php">Help</a></li>
 				</ul>
 			</div>
 		</div>
 		<div id="banner"></div>
-		<center>
-		<div id="f1">
-			<table>
-				<tr>
-					<th width="20%" height="50px">Destination</th>
-					<th width="20%" height="50px">Check in date</th>
-					<th width="20%" height="50px">Check out Date</th>
-					<th width="20%" height="50px">Room</th>
-					<td rowspan="2"><input type="submit" name=sub" value="Check"></td>
-				</tr>
-				<tr>
-					<td width="20%" height="50px"><center><input type="text" name="d1" placeholder="Enter Destination"></center></td>
-					<td width="20%" height="50px"><center><input type="date" name="ci"></center></td>
-					<td width="20%" height="50px"><center><input type="date" name="co"></center></td>
-					<td width="20%" height="50px">
-						<center><select>
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-							<option>5</option>
-						</select></center>
-					</td>
-				</tr>
-			</table>
-		</div>
-		</center>
 		<div id="welcome">
 			<h1 align="center">Welcome to Marina Mirage</h1>
 			<center><font size="4">Isme sab karchra dal na hai.</center>
