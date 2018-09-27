@@ -22,12 +22,16 @@
 				</ul>
 			</div>
 			</div>
-			<br><br><br><br><br>
+			<br><br><br>
 			<center>
 			<div id="f1" style="width: 80%;height: 500px;">
 				<h2 align="left" style="color: red">CONTACT INFORMATION</h2>
-				<a href="#"><h3 align="left" style="color: green">Hotel Staff</h3></a>
-				<a href="#"><h3 align="left" style="color: green">Manager</h3></a>
+				<u><h3>Manager</h3></u>
+				<h3>Name:XYZ<br>Number:+91946579594<br>Email:xyz@gmail.com</h3>
+				<br><br>
+				<u><h3>Hotel</h3></u>
+				<h3>Conatct us at:+919465876458<br>
+					email:marinamirage@gmail.com</h3>
 			</div>
 			</center>
 		</div> 
