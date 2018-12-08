@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div id="full">
-		<div style="background-image: url('img/fp.jpg');width: 100%;height: 450px;">
+		<div style="background-image: url('img/fp.jpg');width: 100%;height: 450px;background-repeat: no-repeat;background-size: cover;">
 		<div id="header">
 			<div id="logo">
 				<h2><font color="white">Marina Mirage</font></h2>
@@ -15,7 +15,6 @@
 			<div id="nav">
 				<ul>
 					<li><a href="start.php">Home</a></li>
-					<li><a href="r1.php">Registration</a></li>
 					<li><a href="booking.php">Booking</a></li>
 					<li><a href="#">Info</a></li>
 					<li><a href="contact.php">Help</a></li>

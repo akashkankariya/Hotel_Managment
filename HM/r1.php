@@ -18,19 +18,10 @@ $co=$_GET['co'];
 			<div id="logo">
 				<h2><font color="white">Marina Mirage</font></h2>
 			</div>
-			<div id="nav">
-				<ul>
-					<li><a href="start.php">Home</a></li>
-					<li><a href="r1.php">Registration</a></li>
-					<li><a href="booking.php">Booking</a></li>
-					<li><a href="#">Info</a></li>
-					<li><a href="contact.php">Help</a></li>
-				</ul>
-			</div>
 		</div>
 		<div id="banner">
 			<div id="form">
-			<form action="r1.php" method="post">
+			<form action="payment.php" method="post">
 			<table>
 				<?php 
 					$q="select * from room where status='unbook'";
@@ -50,7 +41,7 @@ $co=$_GET['co'];
 				</tr>
 				<tr>
 					<td>Address</td>
-					<td><input type="test" name="address" placeholder="Enter Address" title="Address"></td>
+					<td><input type="test" name="address" placeholder="Enter Address" title="Address" ></td>
 				</tr>
 				<tr>
 					<td>City</td>
@@ -107,28 +98,6 @@ $co=$_GET['co'];
 				
 			</table>
 			</form>
-			<?php 
-			if(isset($_POST['submit']))
-			{
-				$name=$_POST['name'];
-				$idno=$_POST['idno'];
-				$add=$_POST['address'];
-				$city=$_POST['city'];
-				$dis=$_POST['dis'];
-				$state=$_POST['state'];
-				$email=$_POST['email'];
-				$coout=$_POST['codate'];
-				$coin=$_POST['cidate'];
-				$m=$_POST['members'];
-				if(mysqli_query($a,"insert into f1(name,city,dis,email,state,cidate,codate,member,id,address) value('$name','$city','$dis','$email','$state','$coin','$coout','$m','$idno','$add')"))
-				{
-					echo "data done";
-				}
-				else{
-					echo "string";
-				}
-			}
-			 ?>
 		</div>
 		</div>
 		</div>
